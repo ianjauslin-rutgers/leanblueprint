@@ -251,8 +251,32 @@ def ProcessOptions(options, document):
             fillcolor = colors['fully_proved'][0]
         return fillcolor
 
+    # determine style from node
+    def stylerizer(node) -> str:
+        data = node.userdata
+        stated = data.get('leanok')
+        can_state = data.get('can_state')
+        can_prove = data.get('can_prove')
+        proved = data.get('proved')
+        fully_proved = data.get('fully_proved')
+
+        style = ''
+        if proved:
+            style='filled'
+        elif can_prove and (can_state or stated):
+            style = 'wedged,dashed'
+        if item_kind(node) == 'definition':
+            if stated:
+                style = 'filled'
+            elif can_state:
+                style = 'striped,dashed'
+        elif fully_proved:
+            style = 'filled'
+        return style
+
     document.userdata['dep_graph']['colorizer'] = colorizer
     document.userdata['dep_graph']['fillcolorizer'] = fillcolorizer
+    document.userdata['dep_graph']['stylerizer'] = stylerizer
 
     document.userdata['dep_graph']['legend'].extend([
       (f"{document.userdata['dep_graph']['colors']['can_state'][1]} border", "the <em>statement</em> of this result is ready to be formalized; all prerequisites are done"),
