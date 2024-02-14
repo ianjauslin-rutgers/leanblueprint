@@ -263,7 +263,7 @@ def ProcessOptions(options, document):
         style = ''
         if proved:
             style='filled'
-        elif can_prove
+        elif can_prove:
             if stated:
                 style = 'filled'
             elif can_state:
