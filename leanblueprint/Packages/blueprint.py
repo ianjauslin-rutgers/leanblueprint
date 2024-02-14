@@ -286,7 +286,7 @@ def ProcessOptions(options, document):
     document.userdata['dep_graph']['legend'].extend([
       (f"{document.userdata['dep_graph']['colors']['can_state'][1]} border", "the <em>statement</em> of this result is ready to be formalized; all prerequisites are done"),
       (f"{document.userdata['dep_graph']['colors']['not_ready'][1]} border", "the <em>statement</em> of this result is not ready to be formalized; the blueprint needs more work"),
-      (f"{document.userdata['dep_graph']['colors']['can_state'][1]} background", "the <em>proof</em> of this result is ready to be formalized; all prerequisites are done"),
+      (f"{document.userdata['dep_graph']['colors']['can_prove'][1]} background", "the <em>proof</em> of this result is ready to be formalized; all prerequisites are done"),
       (f"{document.userdata['dep_graph']['colors']['proved'][1]} border", "the <em>statement</em> of this result is formalized"),
       (f"{document.userdata['dep_graph']['colors']['proved'][1]} background", "the <em>proof</em> of this result is formalized"),
       (f"{document.userdata['dep_graph']['colors']['fully_proved'][1]} background", "the <em>proof</em> of this result and all its ancestors are formalized")])
