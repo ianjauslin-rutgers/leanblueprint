@@ -207,10 +207,10 @@ def ProcessOptions(options, document):
     colors = document.userdata['dep_graph']['colors'] = {
             'mathlib': ('darkgreen', 'Dark green'),
             'stated': ('green', 'Green'),
-            'can_state': ('#FFAA33', 'Orange'),
+            'can_state': ('#FFAA33', 'Orange (dashed)'),
             'not_ready': ('red', 'Red'),
             'proved': ('#9CEC8B', 'Green'),
-            'can_prove': ('#FFFFFF:#FFAA33', 'Orange'),
+            'can_prove': ('#FFFFFF:#FFAA33', 'Orange (gradient)'),
             'defined': ('#B0ECA3', 'Light green'),
             'fully_proved': ('#1CAC78', 'Dark green')
             }
@@ -268,6 +268,8 @@ def ProcessOptions(options, document):
                 style = 'filled'
             elif can_state:
                 style = 'filled,dashed'
+        elif can_state:
+                style = 'dashed'
         if item_kind(node) == 'definition':
             if stated:
                 style = 'filled'
