@@ -267,14 +267,14 @@ def ProcessOptions(options, document):
             if stated:
                 style = 'filled'
             elif can_state:
-                style = 'filled,dashed'
+                style = 'wedged,dashed'
         elif can_state:
                 style = 'dashed'
         if item_kind(node) == 'definition':
             if stated:
                 style = 'filled'
             elif can_state:
-                style = 'filled,dashed'
+                style = 'striped,dashed'
         elif fully_proved:
             style = 'filled'
         return style
