@@ -246,7 +246,7 @@ def ProcessOptions(options, document):
             if stated:
                 fillcolor = colors['defined'][0]
             elif can_state:
-                fillcolor = colors['can_state'][0]
+                fillcolor = colors['can_prove'][0]
         elif fully_proved:
             fillcolor = colors['fully_proved'][0]
         return fillcolor
@@ -263,8 +263,11 @@ def ProcessOptions(options, document):
         style = ''
         if proved:
             style='filled'
-        elif can_prove and (can_state or stated):
-            style = 'filled,dashed'
+        elif can_prove
+            if stated:
+                style = 'filled'
+            elif can_state:
+                style = 'filled,dashed'
         if item_kind(node) == 'definition':
             if stated:
                 style = 'filled'
