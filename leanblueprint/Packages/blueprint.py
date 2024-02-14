@@ -207,10 +207,10 @@ def ProcessOptions(options, document):
     colors = document.userdata['dep_graph']['colors'] = {
             'mathlib': ('darkgreen', 'Dark green'),
             'stated': ('green', 'Green'),
-            'can_state': ('blue', 'Blue'),
-            'not_ready': ('#FFAA33', 'Orange'),
+            'can_state': ('#FFAA33', 'Orange'),
+            'not_ready': ('red', 'Red'),
             'proved': ('#9CEC8B', 'Green'),
-            'can_prove': ('#A3D6FF', 'Blue'),
+            'can_prove': ('#FFAA33', 'Orange'),
             'defined': ('#B0ECA3', 'Light green'),
             'fully_proved': ('#1CAC78', 'Dark green')
             }
