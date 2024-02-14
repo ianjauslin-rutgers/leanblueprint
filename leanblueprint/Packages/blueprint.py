@@ -245,7 +245,7 @@ def ProcessOptions(options, document):
         if stated and item_kind(node) == 'definition':
             fillcolor = colors['defined'][0]
 
-        if fully_proved:
+        elif fully_proved:
             fillcolor = colors['fully_proved'][0]
         return fillcolor
 
