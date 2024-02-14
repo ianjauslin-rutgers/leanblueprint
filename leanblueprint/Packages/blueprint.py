@@ -265,7 +265,7 @@ def ProcessOptions(options, document):
             style='filled'
         elif can_prove:
             if stated:
-                style = 'filled'
+                style = 'wedged'
             elif can_state:
                 style = 'wedged,dashed'
         elif can_state:
