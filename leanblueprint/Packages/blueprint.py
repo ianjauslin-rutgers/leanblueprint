@@ -210,7 +210,7 @@ def ProcessOptions(options, document):
             'can_state': ('#FFAA33', 'Orange (dashed)'),
             'not_ready': ('red', 'Red'),
             'proved': ('#9CEC8B', 'Green'),
-            'can_prove': ('#FFFFFF:#FFAA33', 'Orange (gradient)'),
+            'can_prove': ('#FFFFFF:#FFAA33', 'Orange'),
             'defined': ('#1CAC78', 'Dark green'),
             'fully_proved': ('#1CAC78', 'Dark green')
             }
