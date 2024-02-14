@@ -264,12 +264,12 @@ def ProcessOptions(options, document):
         if proved:
             style='filled'
         elif can_prove and (can_state or stated):
-            style = 'wedged,dashed'
+            style = 'dashed'
         if item_kind(node) == 'definition':
             if stated:
                 style = 'filled'
             elif can_state:
-                style = 'striped,dashed'
+                style = 'dashed'
         elif fully_proved:
             style = 'filled'
         return style
